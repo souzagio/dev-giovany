@@ -55,7 +55,7 @@ header .nav-container a{
     text-decoration: none;
     color: black;
     font-size: 0.9em;
-    margin: 0 5px;
+    margin: 0 9px;
     font-family: var(--font-destaque);
 
     &::after{
