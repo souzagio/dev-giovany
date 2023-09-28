@@ -6,7 +6,7 @@
 
 :root{
     --cor1: #89F0BE;
-    --cor2: #279761;
+    --cor2: #369b6a;
     --cor3: rgba(41, 41, 173, 0.829);
     --font-destaque: 'Montserrat', sans-serif;
     --font-texto: 'Roboto Slab', serif;
@@ -18,11 +18,11 @@
     text-decoration: none;
 }
 
-html{
-    background-image: linear-gradient(68.15deg, var(--cor1) 15%, var(--cor2));
-    background-size: cover;
-    /* background-repeat: no-repeat; */
+ html{
+    background-image: linear-gradient(163.15deg, var(--cor1), var(--cor2));
+    height: 100vh;
 }
+
 /*>>> HEADER <<<*/
 header{
     width: 82vw;
@@ -102,6 +102,7 @@ main .intro{
     max-width: 800px;
     font-family: var(--font-destaque);
     font-weight: 400;
+    padding-right: 30px;
 }
 
 main h2{
@@ -145,6 +146,32 @@ main ul a i{
     margin-right: 7px;
 }
 
+/* TEXT DECORATION */
+main #item{
+    height: 30px;
+    width: 10px;
+    background-color: rgb(87, 56, 221);
+    align-self: flex-end;
+    transform: translate(-19px, 17px);
+}
+
+main #item2{
+    height: 50px;
+    width: 16px;
+    background-color: rgb(59, 34, 170);
+    align-self: flex-end;
+    
+}
+
+main #item3{
+    height: 29px;
+    width: 10px;
+    background-color: rgb(129, 108, 219);
+    align-self: flex-end;
+    transform: translate(-9px, -31px) rotateZ(45deg);
+}
+
+
 /*  BUTTONS HOVER  */
 main  ul #curriculo:hover{
     background-color: rgb(143, 0, 199);
@@ -176,7 +203,7 @@ main .line{
     background-color: rgb(88, 3, 105);
     border-radius: 15px;
     width: 90%;
-    margin: 70px auto 30px auto;
+    margin:20px auto 40px auto;
 }
 
 /* SECTION PROJECTS */
@@ -229,7 +256,40 @@ main .right-image{
     padding: 5px;
     margin: 5px;
 }
+
+/* RIGHT BUTTONS */
+main .right-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    
+}
+
+main .right-btn span{
+    transform: scale(82%);
+    cursor: pointer;
+    border: 1px solid var(--cor3);
+    border-radius: 50%;
+    padding: 6px;
+
+    &:hover{
+        transform: translate(-2px, -2px) scale(90%);
+        border: 1px solid black;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.87);
+        background-color: var(--cor3);
+        color: white;
+    }
+}
+
 /* FOOTER START*/
 footer{
-    margin: 15px;
+    margin-top: 15px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: var(--font-destaque);
+    font-weight: 900;
+    font-size: 1.5em;
 }
