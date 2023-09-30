@@ -20,7 +20,7 @@
 
  html{
     background-image: linear-gradient(163.15deg, var(--cor1), var(--cor2));
-    height: 100vh;
+    
 }
 
 /*>>> HEADER <<<*/
@@ -90,7 +90,7 @@ main .container{
     display: flex;
 }
 
-main .container img{
+main .me .container img{
     border-radius: 50%;
     margin: 20px;
 }
@@ -227,7 +227,7 @@ main .project h1{
     }
 }
 
-/* RIGHT SIDES PROJECTS */
+/* RIGHT SIDE PROJECTS */
 main .right{
     display: flex;
 }
@@ -255,6 +255,13 @@ main .right-text a{
 main .right-image{
     padding: 5px;
     margin: 5px;
+    max-width: 450px;
+    max-height: 450px;
+}
+
+main .right-image img{
+    width: 400px;
+    height: 300px;
 }
 
 /* RIGHT BUTTONS */
@@ -281,6 +288,70 @@ main .right-btn span{
         color: white;
     }
 }
+
+/* END RIGHT SIDE PROJECT */
+/* START LEFT SIDE PROJECT */
+main .left{
+    display: flex;
+}
+
+main .left-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    margin: 2px;
+    max-width: 70%;
+}
+
+main .left-text p{
+    text-align: left;
+}
+
+main .left-text h2{
+    
+}
+
+main .left-text a{
+    transform: translateX(-15px);
+}
+main .left-image{
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+}
+
+main .left-image img{
+    max-width: 400px;
+    max-height: 300px;
+}
+
+/* LEFT BUTTONS */
+main .left-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
+    
+}
+
+main .left-btn span{
+    transform: scale(82%);
+    cursor: pointer;
+    border: 1px solid var(--cor3);
+    border-radius: 50%;
+    padding: 6px;
+
+    &:hover{
+        transform: translate(-2px, -2px) scale(90%);
+        border: 1px solid black;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.87);
+        background-color: var(--cor3);
+        color: white;
+    }
+}
+
+/* END LEFT SIDE PROJECT */
 
 /* FOOTER START*/
 footer{
