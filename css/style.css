@@ -51,6 +51,9 @@ header .container .nav-container{
     flex-grow: 1;
 }
 
+header .container i{
+    display: none;
+}
 header .nav-container a{
     text-decoration: none;
     color: black;
