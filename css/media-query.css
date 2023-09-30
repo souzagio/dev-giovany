@@ -1,6 +1,6 @@
 @charset "UFT-8";
 
-@media screen and (min-width: 400px) and (max-width: 940px) {
+@media screen and (min-width: 400px) and (max-width: 1200px) {
     body{
         background-color: brown;
     }
