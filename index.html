@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="midias/onion-icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media-query.css">
+    <!-- <script src="js/script.js"></script> -->
     <title>Dev. Gio Souza</title>
 </head>
 <body>
@@ -29,6 +30,8 @@
                     <img src="midias/gio.png" alt="Profile Photo">
                     <div class="intro">
                         <h2>DESENVOLVEDOR FRONT-END.</h2>
+                        <h3 id="largura">Larguta do Navegador: </h3>
+                        
                         <P>Desenvolvedor Web Front-End. Conhecimentos sólidos em <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>. Apaixonado pela área de TI, estou sempre em busca de novos conhecimentos e de me aprimorar. Amo desafios (especialmente quando os supero).
                             Desenvolvedor full stack desktop, com domínio nas linguagens <strong>C#</strong> e <strong>MySql</strong>, com noções em <strong>Assembly</strong> e <strong>C++</strong>.</P>
                             <div id="item"></div>
@@ -88,5 +91,20 @@
             <p>Desenvolvido por Giovany de Souza</p>
         </footer>
     </div>
+
+    <script>
+        function getBrowser(){
+            return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        }
+
+        function updateBrowser(){
+            const larguraNav = getBrowser();
+            document.getElementById("largura").textContent = larguraNav + "pixels";
+        }
+
+        window.addEventListener("resize", updateBrowser);
+
+        updateBrowser();
+    </script>
 </body>
 </html>
