@@ -3,6 +3,7 @@
 @media screen and (min-width: 600px) and (max-width: 940px) {
     body{
         width: 100%;
+        background-color: brown;
     }
 
     header .container{
