@@ -1,6 +1,6 @@
 @charset "UFT-8";
 
-@media screen and (min-width: 901px) and (max-width: 1000px) {
+@media screen and (min-width: 769px) and (max-width: 1000px) {
     main ul a{
         padding: 10px 12px;
     }
@@ -11,7 +11,7 @@
     }
 }
 
-@media screen and (min-width: 400px) and (max-width: 900px) {
+@media screen and (min-width: 400px) and (max-width: 768px) {
     
     header{
         width: 100%;
