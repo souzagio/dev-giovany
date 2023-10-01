@@ -42,7 +42,7 @@
 
     header .container nav a{
         margin-top: 10px;
-        
+        display: none;   
     }
 
     /* MENU HAMBURGUER */
