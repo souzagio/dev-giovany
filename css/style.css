@@ -155,7 +155,7 @@ main #item{
     width: 10px;
     background-color: rgb(87, 56, 221);
     align-self: flex-end;
-    transform: translate(-19px, 17px);
+    transform: translate(-19px, 19px);
 }
 
 main #item2{
@@ -171,7 +171,7 @@ main #item3{
     width: 10px;
     background-color: rgb(129, 108, 219);
     align-self: flex-end;
-    transform: translate(-9px, -31px) rotateZ(45deg);
+    transform: translate(-9px, -34px) rotateZ(45deg);
 }
 
 
