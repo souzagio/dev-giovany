@@ -10,3 +10,17 @@ function clickMenu(){
     } else { menu.style.display = 'block'
     menuzinho.style.color = "red";}
 }
+
+function showPage(num)
+{
+    if(num == 3)
+    {
+        alert(`
+        WhatsApp:  (16) 99403 - 1316
+        Ligação:      (16) 99268 - 3210`)
+    }
+    else
+    {
+        alert('Página em desenvolvimento. . .')
+    }
+}
