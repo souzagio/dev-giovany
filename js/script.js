@@ -16,8 +16,12 @@ function showPage(num)
     if(num == 3)
     {
         alert(`
+        Em desenvolvimento. . .
+
         WhatsApp:  (16) 99403 - 1316
-        Ligação:      (16) 99268 - 3210`)
+        Ligação:      (16) 99268 - 3210
+        
+        email: eusougiovany@gmail.com`)
     }
     else
     {
