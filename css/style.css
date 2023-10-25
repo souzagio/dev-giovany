@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root{
-    color-scheme: light only;
+    color-scheme: light only !important;
     --cor1: #89F0BE !important;
     --cor2: #369b6a;
     --cor3: rgba(41, 41, 173, 0.829);
@@ -52,7 +52,7 @@ header .container .nav-container{
     flex-grow: 1;
 }
 
-header .container i{
+header i#hamb-menu{
     display: none;
 }
 header .nav-container a{
@@ -156,11 +156,11 @@ main #item{
     width: 10px;
     background-color: rgb(87, 56, 221);
     align-self: flex-end;
-    transform: translate(-19px, 19px);
+    transform: translate(-19px, 16px);
 }
 
 main #item2{
-    height: 50px;
+    height: 45px;
     width: 16px;
     background-color: rgb(59, 34, 170);
     align-self: flex-end;

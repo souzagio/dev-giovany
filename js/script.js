@@ -2,12 +2,12 @@ function clickMenu(){
     var menu = document.getElementById("lista");
     var menuzinho = document.getElementById("hamb-menu");
     
-    if(menu.style.display == 'block')
+    if(menu.style.display == 'flex')
     {
         menu.style.display = 'none'
         menuzinho.style.color = "red";
 
-    } else { menu.style.display = 'block'
+    } else { menu.style.display = 'flex'
     menuzinho.style.color = "red";}
 }
 
