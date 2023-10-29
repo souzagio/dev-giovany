@@ -28,3 +28,10 @@ function showPage(num)
         alert('Página em desenvolvimento. . .')
     }
 }
+
+/*Change animation on title*/
+const boxTitle = document.querySelector(".text-reveal")
+setTimeout(() => {
+    boxTitle.classList.add("modify")
+    alert('work')
+}, 1000);

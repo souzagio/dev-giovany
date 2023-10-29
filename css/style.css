@@ -41,7 +41,49 @@ header .container{
 /* NAME TITTLE */ 
 header .container H1{
     font-family: var(--font-destaque);
+    animation: fade 5ms 0.3s forwards;
+    opacity: 0;
+}
 
+header .container .text-reveal{
+    overflow: hidden;
+    position: relative;
+    
+    &::after{
+        animation: typing 0.6s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+        content: '';
+        background-color: rgb(62, 3, 199);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+/*Animatio configurations*/
+@keyframes typing{
+    from{
+        transform: translateX(-101%);
+    }
+    to{
+        transform: translateX(101%);
+    }
+}
+
+@keyframes blind{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fade{
+    to{
+        opacity: 1;
+    }
 }
 
 /* NAV LINKS */ 
