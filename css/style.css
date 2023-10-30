@@ -1,55 +1,68 @@
 @charset "UFT-8";
 
+/*Fonts imports */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+:root {
     color-scheme: light only !important;
     --cor1: #89F0BE !important;
     --cor2: #369b6a;
     --cor3: rgba(41, 41, 173, 0.829);
     --font-destaque: 'Montserrat', sans-serif;
     --font-texto: 'Roboto Slab', serif;
+    --Font-highlighted: 'Nunito', sans-serif;
+    --purple-400: rgb(79, 25, 129);
+    --purple-200: rgb(127, 14, 233);
+    --purple-100: rgb(101, 31, 167);
+    --purple-50: rgb(89, 45, 131);
+    --blue-200: rgba(9, 9, 158, 0.829);
+    --violet-150: #940B92;
+    --pink-100: #DA0C81;
+    --pink-50: #E95793;
+    --bg-gradient: linear-gradient(135deg, var(--blue-200), var(--purple-400),var(--purple-100) , var(--blue-200), var(--purple-200) 85%);;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
+    caret-color: transparent;
 }
 
- html{
-    background-image: linear-gradient(163.15deg, var(--cor1), var(--cor2));
-    
+html {
+    background: #212121;
+    background-size: 300% 150%;
 }
 
 /*>>> HEADER <<<*/
-header{
-    width: 82vw;
-    background-color: rgba(255, 255, 255, 0.863) !important;
-    margin: 10px auto;
+header {
+    margin:  auto;
     margin-bottom: 0;
     border-radius: 5px 5px 0 0;
-} 
+    box-shadow: 0 2px 0 black;
+}
 
-header .container{
+header .container {
     display: flex;
     padding: 10px 0px 10px 10px;
 }
 
-/* NAME TITTLE */ 
-header .container H1{
-    font-family: var(--font-destaque);
+/* NAME TITTLE */
+header .container H1 {
+    font-family: var(--Font-highlighted);
     animation: fade 5ms 0.3s forwards;
     opacity: 0;
 }
 
-header .container .text-reveal{
+/* header .container .text-reveal {
     overflow: hidden;
     position: relative;
-    
-    &::after{
+
+    &::after {
         animation: typing 0.6s cubic-bezier(0.85, 0, 0.15, 1) forwards;
         content: '';
         background-color: rgb(62, 3, 199);
@@ -59,54 +72,31 @@ header .container .text-reveal{
         bottom: 0;
         left: 0;
     }
-}
+} */
 
-/*Animatio configurations*/
-@keyframes typing{
-    from{
-        transform: translateX(-101%);
-    }
-    to{
-        transform: translateX(101%);
-    }
-}
-
-@keyframes blind{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-@keyframes fade{
-    to{
-        opacity: 1;
-    }
-}
-
-/* NAV LINKS */ 
-header .container .nav-container{
+/* NAV LINKS */
+header .container .nav-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     padding: 10px;
     flex-grow: 1;
 }
 
-header i#hamb-menu{
+header i#hamb-menu {
     display: none;
 }
-header .nav-container a{
+
+
+header .nav-container a {
     text-decoration: none;
-    color: black;
+    color: #fff;
     font-size: 0.9em;
     margin: 0 9px;
     font-family: var(--font-destaque);
 
-    &::after{
+    &::after {
         content: "";
-        background-color: rgb(62, 3, 199);
+        background-color: var(--pink-50);
         height: 2px;
         display: block;
         width: 0%;
@@ -114,34 +104,78 @@ header .nav-container a{
         transition: .4s;
     }
 
-    &:hover::after{
+    &:hover::after {
         width: 100%;
     }
-    
-    &:hover{
-        color: rgb(219, 87, 39);
+
+    &:hover {
+        color: var(--pink-100);
         font-weight: 600;
     }
 }
+
 /*>>> MAIN START <<<*/
-main{
-    background-color: rgba(255, 255, 255, 0.863) !important;
+main {
     width: 82vw;
-    margin: 0 auto;
+    margin: 10px auto;
     margin-bottom: 40px;
     border-radius: 0 0 5px 5px;
 }
 
-main .container{
+/* introducing myself */
+
+main .name-focus{
+    height: 350px;
+}
+
+main .name-focus p{
+    padding-bottom: 0;
+    margin-top: 15px;
+    color: var(--pink-100);
+}
+
+main .name-focus h1{
+    font-family: var(--font-destaque);
+    margin: 0 0 0 25px;
+    color: var(--pink-50);
+    font-size: 2.8em;
+}
+
+/*Typing effect */
+.name-focus span{
+    position: relative;
+    margin-left: 60px;
+    font-size: 3.6em;
+    font-family: var(--Font-highlighted);
+    &::before{
+        content: '';
+        color: var(--pink-100);
+        animation: words 20s infinite;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        border-left: 2px solid #ff007b;
+        right: -10px;
+        animation: cursor .8s infinite, typing 20s steps(25) infinite;
+        width: calc(100% + 12px);
+        background-color: #212121;
+    }
+}
+
+main .container {
     display: flex;
 }
 
-main .me .container img{
-    border-radius: 50%;
-    margin: 20px;
+main .me .container img {
+    border-radius: 15px;
+    max-width: 250px;
+    
 }
 
-main .intro{
+main .intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,24 +185,24 @@ main .intro{
     padding-right: 30px;
 }
 
-main h2{
+main h2 {
     margin-bottom: 5px;
     font-weight: 700;
     transform: translateX(15px);
 }
 
-main p{
+main p {
     padding: 18px;
     text-align: justify;
 }
 
-main p strong{
+main p strong {
     font-weight: 600;
 }
 
 
 /* NAV LINKS */
-main ul{
+main ul {
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
@@ -176,7 +210,7 @@ main ul{
     padding-bottom: 15px;
 }
 
-main ul a{
+main ul a {
     margin-bottom: 10px;
     padding: 12px 25px;
     border: 1px solid rgba(41, 41, 173, 0.900);
@@ -188,12 +222,12 @@ main ul a{
     font-size: 1.1em;
 }
 
-main ul a i{
+main ul a i {
     margin-right: 7px;
 }
 
 /* TEXT DECORATION */
-main #item{
+main #item {
     height: 30px;
     width: 10px;
     background-color: rgb(87, 56, 221);
@@ -201,15 +235,15 @@ main #item{
     transform: translate(-19px, 16px);
 }
 
-main #item2{
+main #item2 {
     height: 45px;
     width: 16px;
     background-color: rgb(59, 34, 170);
     align-self: flex-end;
-    
+
 }
 
-main #item3{
+main #item3 {
     height: 29px;
     width: 10px;
     background-color: rgb(129, 108, 219);
@@ -219,7 +253,7 @@ main #item3{
 
 
 /*  BUTTONS HOVER  */
-main  ul #curriculo:hover{
+main ul #curriculo:hover {
     background-color: rgb(143, 0, 199);
     color: white;
     transform: translate(-2px, -5px);
@@ -227,15 +261,15 @@ main  ul #curriculo:hover{
     border: 1px solid black;
 }
 
-main  ul #github:hover{
-    background-image: linear-gradient(to bottom, #3f3f3f 10%,#2c2c2c);
+main ul #github:hover {
+    background-image: linear-gradient(to bottom, #3f3f3f 10%, #2c2c2c);
     color: white;
     transform: translate(-2px, -5px);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.747);
     border: 1px solid black;
 }
 
-main  ul #lkdin:hover{
+main ul #lkdin:hover {
     background-color: #0A66C2;
     color: white;
     transform: translate(-2px, -5px);
@@ -244,26 +278,26 @@ main  ul #lkdin:hover{
 }
 
 /* LINE */
-main .line{
+main .line {
     height: 2px;
     background-color: rgb(88, 3, 105);
     border-radius: 15px;
     width: 90%;
-    margin:20px auto 40px auto;
+    margin: 20px auto 40px auto;
 }
 
 /* SECTION PROJECTS */
-main .project{
+main .project {
     display: flex;
     margin: 0 0 20px 20px;
     font-family: var(--font-destaque);
 }
 
-main .project h1{
+main .project h1 {
     font-weight: 700;
     margin: 0 15px 20px 0;
 
-    &::after{
+    &::after {
         content: "";
         height: 5px;
         background-color: rgb(129, 3, 129);
@@ -274,11 +308,11 @@ main .project h1{
 }
 
 /* RIGHT SIDE PROJECTS */
-main .right{
+main .right {
     display: flex;
 }
 
-main .right-text{
+main .right-text {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -287,46 +321,47 @@ main .right-text{
     max-width: 70%;
 }
 
-main .right-text p{
+main .right-text p {
     text-align: right;
 }
 
-main .right-text h2{
+main .right-text h2 {
     transform: translateX(-30px);
 }
 
-main .right-text a{
+main .right-text a {
     transform: translateX(-15px);
 }
-main .right-image{
+
+main .right-image {
     padding: 5px;
     margin: 5px;
     max-width: 450px;
     max-height: 450px;
 }
 
-main .right-image img{
+main .right-image img {
     width: 400px;
     height: 300px;
 }
 
 /* RIGHT BUTTONS */
-main .right-btn{
+main .right-btn {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     padding: 0;
-    
+
 }
 
-main .right-btn span{
+main .right-btn span {
     transform: scale(82%);
     cursor: pointer;
     border: 1px solid var(--cor3);
     border-radius: 50%;
     padding: 6px;
 
-    &:hover{
+    &:hover {
         transform: translate(-2px, -2px) scale(90%);
         border: 1px solid black;
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.87);
@@ -337,11 +372,11 @@ main .right-btn span{
 
 /* END RIGHT SIDE PROJECT */
 /* START LEFT SIDE PROJECT */
-main .left{
+main .left {
     display: flex;
 }
 
-main .left-text{
+main .left-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -350,45 +385,44 @@ main .left-text{
     max-width: 70%;
 }
 
-main .left-text p{
+main .left-text p {
     text-align: left;
 }
 
-main .left-text h2{
-    
-}
+main .left-text h2 {}
 
-main .left-text a{
+main .left-text a {
     transform: translateX(-15px);
 }
-main .left-image{
+
+main .left-image {
     padding: 5px;
     margin: 5px;
     display: flex;
 }
 
-main .left-image img{
+main .left-image img {
     max-width: 400px;
     max-height: 300px;
 }
 
 /* LEFT BUTTONS */
-main .left-btn{
+main .left-btn {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     padding-left: 30px;
-    
+
 }
 
-main .left-btn span{
+main .left-btn span {
     transform: scale(82%);
     cursor: pointer;
     border: 1px solid var(--cor3);
     border-radius: 50%;
     padding: 6px;
 
-    &:hover{
+    &:hover {
         transform: translate(-2px, -2px) scale(90%);
         border: 1px solid black;
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.87);
@@ -400,7 +434,7 @@ main .left-btn span{
 /* END LEFT SIDE PROJECT */
 
 /* FOOTER START*/
-footer{
+footer {
     margin-top: 15px;
     height: 50px;
     display: flex;
@@ -409,4 +443,69 @@ footer{
     font-family: var(--font-destaque);
     font-weight: 900;
     font-size: 1.5em;
+}
+
+
+/*Animations */
+@keyframes top-mov{
+    0%{
+        background-position-x: 0%;
+    }
+    50%{
+        background-position-x: 50%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+@keyframes blind {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*typing animation*/
+@keyframes typing{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 12px);
+    }
+}
+
+@keyframes cursor{
+    0%{
+        border-left: 2px solid #212121;
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: "Front-end Web";
+    }
+    21%, 40%{
+        content: "Html, CSS, JavaScript";
+    }
+    41%, 60%{
+        content: "Full-Stack Developer";
+    }
+    61%,80%{
+        content: "C# and MySql";
+    }
+    81%,100%{
+        content: "Contact me. . .";
+    }
 }
