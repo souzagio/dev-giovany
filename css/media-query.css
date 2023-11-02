@@ -33,6 +33,7 @@
 
     header{
         width: 100%;
+        box-shadow: none;
     }
 
     main{
@@ -181,7 +182,6 @@
         margin: 5px;
         padding: 0;
         padding-bottom: 10px;
-        background-color: rgba(38, 144, 86, 0.589);
         border-radius: 10px;
     }
 
@@ -221,6 +221,30 @@
             color: white;
         }
     }
-
     /* END LEFT */
+
+
+    /*BACKGROUNDS*/
+    #howork{
+        background-color: rgb(226, 119, 80);
+        padding-bottom: 10px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    #to-do{
+        background-color: rgba(55, 15, 63, 0.753);
+        padding-bottom: 10px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    /*Stop animation*/
+    .name-focus span{
+        font-size: 1.8em;
+    }
+
+    .name-focus{
+        height: 240px;
+    }
 }

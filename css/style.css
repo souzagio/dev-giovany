@@ -34,7 +34,7 @@
 }
 
 html {
-    background: #212121;
+    background: #313131;
     background-size: 300% 150%;
 }
 
@@ -46,7 +46,7 @@ header {
     box-shadow: 0 2px 0 black;
 }
 
-header .container {
+.container {
     display: flex;
     padding: 10px 0px 10px 10px;
 }
@@ -120,12 +120,14 @@ main {
     margin: 10px auto;
     margin-bottom: 40px;
     border-radius: 0 0 5px 5px;
+    color: #e6e5e5;
 }
 
 /* introducing myself */
 
-main .name-focus{
-    height: 350px;
+
+.name-focus{
+    height: 280px;
 }
 
 main .name-focus p{
@@ -161,7 +163,7 @@ main .name-focus h1{
         right: -10px;
         animation: cursor .8s infinite, typing 20s steps(25) infinite;
         width: calc(100% + 12px);
-        background-color: #212121;
+        background-color: #313131;
     }
 }
 
@@ -175,7 +177,7 @@ main .me .container img {
     
 }
 
-main .intro {
+.intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,6 +185,11 @@ main .intro {
     font-family: var(--font-destaque);
     font-weight: 400;
     padding-right: 30px;
+}
+
+.intro p{
+    font-family: monospace;
+    font-size: 1.3em;
 }
 
 main h2 {
@@ -213,12 +220,12 @@ main ul {
 main ul a {
     margin-bottom: 10px;
     padding: 12px 25px;
-    border: 1px solid rgba(41, 41, 173, 0.900);
+    border: 1px solid rgb(41, 41, 173);
     box-shadow: 0px 0px 2px rgba(41, 41, 173, 0.459);
     border-radius: 8px;
     font-family: var(--font-destaque);
     font-weight: 700;
-    color: rgb(75, 74, 74);
+    color: #bdbdbd;
     font-size: 1.1em;
 }
 
@@ -310,6 +317,7 @@ main .project h1 {
 /* RIGHT SIDE PROJECTS */
 main .right {
     display: flex;
+    text-decoration: none;
 }
 
 main .right-text {
@@ -323,10 +331,12 @@ main .right-text {
 
 main .right-text p {
     text-align: right;
+    font-size: 20px;
 }
 
 main .right-text h2 {
     transform: translateX(-30px);
+    font-size: 2.2em;
 }
 
 main .right-text a {
@@ -385,11 +395,14 @@ main .left-text {
     max-width: 70%;
 }
 
-main .left-text p {
-    text-align: left;
+.left-text h2{
+    font-size: 2.2em;
 }
 
-main .left-text h2 {}
+main .left-text p {
+    text-align: left;
+    font-size: 20px;
+}
 
 main .left-text a {
     transform: translateX(-15px);
@@ -431,6 +444,14 @@ main .left-btn span {
     }
 }
 
+
+.site{
+    color: #940B92;
+}
+
+.code{
+    color: #940B92;
+}
 /* END LEFT SIDE PROJECT */
 
 /* FOOTER START*/
@@ -488,7 +509,7 @@ footer {
 
 @keyframes cursor{
     0%{
-        border-left: 2px solid #212121;
+        border-left: 2px solid #313131;
     }
 }
 
